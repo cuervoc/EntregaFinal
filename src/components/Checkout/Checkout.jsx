@@ -1,6 +1,7 @@
 import {useState} from "react" 
 import { useCart } from "../../hooks/useCart";
 import {db} from '../../services/firebase'
+import  './Checkout.css'
 import { addDoc, collection, documentId, getDocs, query, where, writeBatch } from "firebase/firestore";
 
 export default function Checkout() {
@@ -89,7 +90,7 @@ export default function Checkout() {
   };
 
   return (
-    <>
+    <div className="checkout-container">
       <h1>Checkout</h1>
       <form>
         <label>Nombre</label>
@@ -97,33 +98,36 @@ export default function Checkout() {
           type="text"
           value={nombre}
           onChange={(e) => setNombre(e.target.value)}
-        />{" "}
-        <br />
+        />
         <label>Apellido</label>
         <input
           type="text"
           value={apellido}
           onChange={(e) => setApellido(e.target.value)}
         />
-        <br />
         <label>Phone</label>
         <input
           type="text"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
         />
-        <br />
         <label>Direccion</label>
         <input
           type="text"
           value={direccion}
           onChange={(e) => setDireccion(e.target.value)}
         />
-        <br />
-        <button type="submit" className="btn btn-primary" onClick={createOrder}>
+        <button type="submit" className="btn" onClick={createOrder}>
           Generar Orden
         </button>
       </form>
-    </>
+      {orderCreated && (
+        <h4 className="success">¡La orden fue creada correctamente!</h4>
+      )}
+      {cart.length === 0 && (
+        <h4 className="error">El carrito está vacío. Agrega productos antes de continuar.</h4>
+      )}
+    </div>
   );
+  
 }
