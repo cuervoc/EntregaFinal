@@ -3,7 +3,7 @@ import "./ItemList.css";
 
 function ItemList({products}) {
   return (
-    <div className="grid">
+    <div className="item-grid">
         {products.map( product => <Item key={product.id} product={product} />)}
     </div>
   )

@@ -1,0 +1,58 @@
+/* Contenedor principal */
+.item-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Título del contador */
+  .item-count h1 {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  /* Botones */
+  .item-count button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+  }
+  
+  .item-count button:hover {
+    background-color: #0056b3;
+  }
+  
+  .item-count button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Botón específico para 'Decrementar' */
+  .item-count button:first-child {
+    background-color: #dc3545;
+  }
+  
+  .item-count button:first-child:hover {
+    background-color: #a71d2a;
+  }
+  
+  /* Botón específico para 'Agregar al carrito' */
+  .item-count button:nth-child(2) {
+    background-color: #28a745;
+  }
+  
+  .item-count button:nth-child(2):hover {
+    background-color: #1e7e34;
+  }
+  

@@ -1,14 +1,57 @@
-.grid {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: stretch;
-  align-items: flex-start;
-  margin: 0 auto;
-  padding: 4em 1em;
-  max-width: 1200px;
+/* Estilo para el contenedor de grid */
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adaptable */
+  gap: 20px; /* Espaciado entre tarjetas */
+  padding: 20px;
+}
+
+/* Estilo para cada card */
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de la imagen */
+.card-img-top {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Estilo del contenido */
+.card-body {
+  padding: 16px;
   text-align: center;
-  overflow: hidden;
-  user-select: none;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+/* Estilo del enlace */
+.card-body a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card-body a:hover {
+  color: #0056b3;
 }
