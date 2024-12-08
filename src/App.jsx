@@ -16,7 +16,7 @@ function App() {
     <BrowserRouter>
       <CartProvider>
         <NotificationProvider>
-          <NavBar cartCount={5} title="Tienda Coder" />
+          <NavBar cartCount={5} title="SOLO GAMER 🎮" />
           <Routes>
             <Route
               exact

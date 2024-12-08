@@ -18,7 +18,7 @@ function ItemDetail({id, name, img, summary, platform, price, stock }) {
       <div className="card">
         <img
           src={img}
-          style={{ width: 300 }}
+          style={{ width: 300,  height:300}}
           className="card-img-top"
           alt={name}
         />
@@ -28,17 +28,19 @@ function ItemDetail({id, name, img, summary, platform, price, stock }) {
           <h2 className="card-text">Precio: $ {price}</h2>
           <h2 className="card-text">Disponible - {stock}</h2>
         </div>
-      </div>
+   
 
       {
         isInCart(id) ? (
-          <Link to="/cart">Ir al carrito</Link>
+          <div className="d-flex justify-content-center">
+          <Link className="btn " to="/cart">Ir al carrito</Link>
+          </div>
         ):
         (
           <ItemCount stock={stock} onAdd={ handleAdd } />
         )
       }
-
+   </div>
     </div>
   );
 }

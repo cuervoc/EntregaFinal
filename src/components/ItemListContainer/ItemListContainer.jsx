@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
+import './loader.css'
 
 import { getProducts } from "../../services/firebase/firestore/products";
 import { useAsync } from "../../hooks/useAsync";
-
 function ItemListContainer({ greetings }) {
   const { categoryId } = useParams();
 
@@ -12,12 +12,12 @@ function ItemListContainer({ greetings }) {
 
   if (loading) {
     return (
-      <h4
-        className="text-center"
-        style={{ backgroundColor: "red", color: "white", padding: "10px" }}
-      >
-        Loading...
-      </h4>
+      <div className="loader-container">
+        <div>
+          <div className="loader"></div>
+          <p className="loader-text">Cargando productos...</p>
+        </div>
+      </div>
     );
   }
 

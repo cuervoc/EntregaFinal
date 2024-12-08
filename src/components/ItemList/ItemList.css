@@ -1,7 +1,7 @@
 /* Estilo para el contenedor de grid */
 .item-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adaptable */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 2fr)); /* Adaptable */
   gap: 20px; /* Espaciado entre tarjetas */
   padding: 20px;
 }
